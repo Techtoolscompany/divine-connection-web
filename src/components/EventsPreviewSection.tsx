@@ -17,7 +17,7 @@ const events = [
         category: 'Outreach',
         categoryColor: 'bg-blue-50 text-blue-600',
         date: { month: 'Oct', day: '28' },
-        time: '10:00 AM',
+        time: '11:00 AM',
         image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDd5eDrgAntTlkLMYXJmwfDHtuztaocmFY5FhKXXq8WRsFwkhcd3Yn1eE_RJohKH1lVqVbR9TFclk5e2sjnrAu9WToMEDrPkLo-0sg71_xvxzxFXlLHA4P-IZEFKCo3_--OKaUGy1HxoVF1yY94TWDvjzpqFGXG7yybT7H2cEiSVA-30iu2lZQdWx0yLKSsfG6G7upVAJ-J9z3f0UnS73xyWj6nwvWuRY6wGUOB8oFYk-maD03IgDSaX4NENCnOi1bEO8E20iUEoKY'
     },
     {
