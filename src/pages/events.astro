@@ -1,0 +1,118 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Upcoming Events | Divine Connection">
+  <Navbar />
+  
+  <main class="flex-1 max-w-[1200px] mx-auto w-full px-6 py-12">
+    <section class="mb-16">
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-slate-100 pb-12">
+        <div class="max-w-2xl">
+          <span class="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent font-bold text-sm uppercase tracking-[0.2em] mb-4 block opacity-0 animate-fade-in-up">Community Life</span>
+          <h1 class="font-serif text-5xl md:text-7xl font-light italic leading-tight mb-6 text-slate-900 opacity-0 animate-fade-in-up delay-100"><span class="text-gradient">Upcoming Events</span></h1>
+          <p class="text-lg text-slate-600 font-light leading-relaxed opacity-0 animate-fade-in-up delay-200">
+            Join us for fellowship, worship, and service. There is always something happening at Divine Connection.
+          </p>
+        </div>
+        <div class="flex gap-4 opacity-0 animate-fade-in-up delay-300">
+          <a href="/calendar" class="flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-3 rounded-xl font-bold text-sm hover:opacity-90 transition-opacity shadow-lg shadow-purple-500/20">
+            <span class="material-symbols-outlined text-lg">calendar_month</span>
+            View Full Calendar
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-20">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="font-serif text-3xl font-medium italic text-slate-900">Featured in Suitland</h2>
+      </div>
+      
+      <div class="flex gap-6 overflow-x-auto no-scrollbar pb-8 -mx-4 px-4">
+        <!-- Event 1 -->
+        <div class="min-w-[380px] group cursor-pointer bg-white rounded-2xl p-4 shadow-soft hover:shadow-xl transition-shadow duration-300">
+          <div class="relative h-[200px] rounded-xl overflow-hidden mb-4">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Modern worship band performing on stage" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDEF6F2psbf58a_oyDQdQwEdF9YOV_Z7htVGu6Zn3Wya5I7YcYaCAupdja4wOybHutmHJ3sX10ec4c7j0KI3ucdQ_s1oyd_NaJNaqx06At12Y88jjH6FoJMUTV6mWhltgawJ2iDN_anSJ8fDMWnFYPB1_Q5gD--IAKSABLJKXW7is84IEbbArudsUaiEmqc23r3SEZ0TRqfPy6Bb64Ph5ySY37VDJnnG_B-JhmkwApRz0ZuL1mqZcUE4wrGok8EJIbYp0zsFOvv5p0');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4">
+              <span class="bg-white/90 backdrop-blur text-purple-700 text-[10px] font-black uppercase tracking-widest px-2 py-1 rounded mb-2 inline-block shadow-sm">Featured</span>
+            </div>
+          </div>
+          <div class="flex gap-4 px-2 pb-2">
+            <div class="flex flex-col items-center pt-1">
+              <span class="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent font-black text-2xl">24</span>
+              <span class="text-xs font-bold uppercase tracking-widest text-slate-400">Oct</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-1 text-slate-900 group-hover:text-purple-600 transition-colors">Night of Worship</h3>
+              <p class="text-slate-500 text-sm flex items-center gap-1">
+                <span class="material-symbols-outlined text-[16px] text-purple-500">schedule</span> 
+                Main Sanctuary • 7:00 PM
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="min-w-[380px] group cursor-pointer bg-white rounded-2xl p-4 shadow-soft hover:shadow-xl transition-shadow duration-300">
+          <div class="relative h-[200px] rounded-xl overflow-hidden mb-4">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="People volunteering at a food bank" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDd5eDrgAntTlkLMYXJmwfDHtuztaocmFY5FhKXXq8WRsFwkhcd3Yn1eE_RJohKH1lVqVbR9TFclk5e2sjnrAu9WToMEDrPkLo-0sg71_xvxzxFXlLHA4P-IZEFKCo3_--OKaUGy1HxoVF1yY94TWDvjzpqFGXG7yybT7H2cEiSVA-30iu2lZQdWx0yLKSsfG6G7upVAJ-J9z3f0UnS73xyWj6nwvWuRY6wGUOB8oFYk-maD03IgDSaX4NENCnOi1bEO8E20iUEoKY');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          </div>
+          <div class="flex gap-4 px-2 pb-2">
+            <div class="flex flex-col items-center pt-1">
+              <span class="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent font-black text-2xl">28</span>
+              <span class="text-xs font-bold uppercase tracking-widest text-slate-400">Oct</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-1 text-slate-900 group-hover:text-purple-600 transition-colors">Community Food Drive</h3>
+              <p class="text-slate-500 text-sm flex items-center gap-1">
+                <span class="material-symbols-outlined text-[16px] text-purple-500">schedule</span> 
+                North Parking Lot • 10:00 AM
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="min-w-[380px] group cursor-pointer bg-white rounded-2xl p-4 shadow-soft hover:shadow-xl transition-shadow duration-300">
+          <div class="relative h-[200px] rounded-xl overflow-hidden mb-4">
+            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Group of friends talking and laughing" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSIphywLq5xfppO1c9M_s6QgNoWQ7-5is79nIAVNBwIyRYRXasOkGTybVDU7SthannfpRfK-vw8srJVsQyY1cUzV17V-yBLCgZYsCx2FWvsQa0XeYEXj7Yn2-qoeAWOpznZ81arSQXwByJlLajXGuVG24GLzpmXuiRUPmPCpSftuWgj6KdOwoTxfGtft6AnoSOs6y2_TnI3cUtBwMnyJTTVrUT0VyWmXDxpMCwBOl5ke86eNJWimKJdxLBUPxaPFYgFxLoNsIZf7U');"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+          </div>
+          <div class="flex gap-4 px-2 pb-2">
+            <div class="flex flex-col items-center pt-1">
+              <span class="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent font-black text-2xl">02</span>
+              <span class="text-xs font-bold uppercase tracking-widest text-slate-400">Nov</span>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-1 text-slate-900 group-hover:text-purple-600 transition-colors">Young Adults Connect</h3>
+              <p class="text-slate-500 text-sm flex items-center gap-1">
+                <span class="material-symbols-outlined text-[16px] text-purple-500">schedule</span> 
+                Community Lounge • 6:30 PM
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+  .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+  }
+  .shadow-soft {
+      box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08);
+  }
+</style>

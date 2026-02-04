@@ -1,0 +1,186 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Sermons | Divine Connection">
+  <Navbar />
+  
+  <main class="max-w-7xl mx-auto px-6 py-8 min-h-screen">
+    <section class="mb-12">
+      <div class="relative rounded-2xl overflow-hidden min-h-[480px] flex flex-col justify-end bg-slate-900 shadow-xl">
+        <div class="absolute inset-0 bg-cover bg-center" data-alt="Cinematic background of a church interior with soft lighting" style="background-image: linear-gradient(to top, rgba(16, 19, 34, 0.9) 0%, rgba(16, 19, 34, 0.4) 50%, rgba(16, 19, 34, 0) 100%), url('https://lh3.googleusercontent.com/aida-public/AB6AXuBes4T5t4Yau4NC28zruB9EIFkbaQ9UgXaLHEmeHjpFAOkaHqlPoyEtwBv0g57zdM5uGF6-KCovGdSTXb23lN5H37vRf9qdid39O3voL2WhDD0AQf2sQ4fZd9VmdP8onsxlnPtGe8dV8OWQ04XYr92zpeofdKITD0i6yaXuwPNPJvlxZZWPcvcd2OmI1-ly384IOW-LZwiSSNlMsGz7eV1HO8Vg8tbJor9D8EwL-yWCXFqwizkmVa1AyEjb2gIvbBPrC802D7TeQOQ')"></div>
+        <div class="relative p-10 max-w-3xl">
+          <span class="inline-block px-3 py-1 bg-gradient-to-r from-purple-600 to-blue-600 text-white text-[10px] font-bold uppercase tracking-widest rounded mb-4 shadow-lg shadow-purple-500/30 opacity-0 animate-fade-in-up">Featured Sermon</span>
+          <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight drop-shadow-sm opacity-0 animate-fade-in-up delay-100">The Foundation of Faith: Navigating Modern Waters</h2>
+          <p class="text-lg text-white/80 mb-8 leading-relaxed drop-shadow-sm opacity-0 animate-fade-in-up delay-200">
+            Join Dr. Sarah Jenkins as we explore the bedrock principles of living a life centered on Christ, navigating modern challenges with ancient wisdom and unwavering hope.
+          </p>
+          <div class="flex items-center gap-6 mb-8 text-white/90 opacity-0 animate-fade-in-up delay-300">
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-purple-300">person</span>
+              <span class="text-sm font-medium">Dr. Sarah Jenkins</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-purple-300">schedule</span>
+              <span class="text-sm font-medium">45 min</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-purple-300">calendar_today</span>
+              <span class="text-sm font-medium">Oct 22, 2023</span>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-4 opacity-0 animate-fade-in-up delay-300">
+            <button class="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:shadow-lg hover:shadow-purple-500/40 text-white rounded-xl font-bold transition-all transform hover:scale-105">
+              <span class="material-symbols-outlined">play_arrow</span>
+              Watch Now
+            </button>
+            <button class="flex items-center gap-2 px-8 py-4 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white rounded-xl font-bold transition-all border border-white/10">
+              <span class="material-symbols-outlined">podcasts</span>
+              Listen to Podcast
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-10 flex flex-wrap items-center justify-between gap-6">
+      <div class="flex flex-wrap items-center gap-4">
+        <div class="relative">
+          <select class="appearance-none bg-white border border-slate-200 rounded-lg pl-4 pr-10 py-2.5 text-sm font-medium focus:ring-purple-500 focus:border-purple-500 cursor-pointer text-slate-700 shadow-sm hover:border-slate-300 transition-colors">
+            <option>All Series</option>
+            <option>Summer Psalms</option>
+            <option>Kingdom Living</option>
+            <option>The Parables</option>
+          </select>
+          <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">expand_more</span>
+        </div>
+        <div class="relative">
+          <select class="appearance-none bg-white border border-slate-200 rounded-lg pl-4 pr-10 py-2.5 text-sm font-medium focus:ring-purple-500 focus:border-purple-500 cursor-pointer text-slate-700 shadow-sm hover:border-slate-300 transition-colors">
+            <option>All Speakers</option>
+            <option>Pastor John Doe</option>
+            <option>Dr. Sarah Jenkins</option>
+            <option>Rev. Michael Smith</option>
+          </select>
+          <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">expand_more</span>
+        </div>
+        <div class="relative">
+          <select class="appearance-none bg-white border border-slate-200 rounded-lg pl-4 pr-10 py-2.5 text-sm font-medium focus:ring-purple-500 focus:border-purple-500 cursor-pointer text-slate-700 shadow-sm hover:border-slate-300 transition-colors">
+            <option>All Topics</option>
+            <option>Grace</option>
+            <option>Faith</option>
+            <option>Prayer</option>
+            <option>Leadership</option>
+          </select>
+          <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">expand_more</span>
+        </div>
+      </div>
+      <div class="flex items-center bg-white rounded-lg p-1 border border-slate-200 shadow-sm">
+        <button class="px-4 py-1.5 rounded-md bg-gradient-to-r from-purple-600 to-blue-600 text-white text-xs font-bold uppercase tracking-wider shadow-sm">Videos</button>
+        <button class="px-4 py-1.5 rounded-md text-xs font-bold uppercase tracking-wider text-slate-500 hover:text-slate-800 transition-colors">Audio</button>
+      </div>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="group sermon-card cursor-pointer bg-white rounded-xl shadow-sm border border-slate-100 hover:shadow-lg transition-all duration-300">
+        <div class="relative aspect-video rounded-t-xl overflow-hidden">
+          <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Sunset landscape with mountains" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCscWZ_tIA7BbgaD0r_ZvXAU0LmsTL-1FcK0Vy4HpXi29Mzi8_zEWq4Bc3M3wYMbX1Mn7vwr0zzR_6VJQMQrn_1jcI6NUbitBju0XI9d3qDeLnAR3ywgJnhI2hQ4qAcq_vAu7F-SX_yGy0cTBcMDnw1XNrPEvKMJdKP9VwyW1AGLDCKQSQ4d8_JOX1m2Pneo4DJmXqRjhNsy0tWh1tpMBabSFTTvPPV_jcWSlzLlMOCt0jGl0lQW7oZkhv4koAgemUPv1xtY-0j9Ug')"></div>
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="play-button size-14 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center play-glow opacity-0 transition-all duration-300 shadow-xl shadow-purple-900/40">
+              <span class="material-symbols-outlined text-white text-3xl">play_arrow</span>
+            </div>
+          </div>
+          <div class="absolute bottom-3 right-3 px-2 py-1 bg-black/70 backdrop-blur-md rounded text-[10px] font-bold text-white shadow-sm">
+            38:24
+          </div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="font-bold text-lg text-slate-800 group-hover:text-purple-600 transition-colors line-clamp-1">Finding Peace in the Storm</h3>
+            <span class="material-symbols-outlined text-slate-300 hover:text-slate-600 transition-colors">more_vert</span>
+          </div>
+          <div class="flex items-center gap-3 text-sm text-slate-500">
+            <span class="font-medium text-slate-600">Pastor John Doe</span>
+            <span class="size-1 rounded-full bg-slate-300"></span>
+            <span>The Book of Mark</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="group sermon-card cursor-pointer bg-white rounded-xl shadow-sm border border-slate-100 hover:shadow-lg transition-all duration-300">
+        <div class="relative aspect-video rounded-t-xl overflow-hidden">
+          <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Quiet forest morning light" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDggNRdzhoFcgU0GC6oD3W4YRDPnV2-m4tfQCTP_iC6cxfcKfESdeBrfEDrwx2jkc4YK3CEjoGF-DFHtt_2L-qQeg67YZWRTlwtd5FS-jcyTJ0qs2INkNIdtP1eU1WjpydXB0Dm-z52ng5movlCu02JwJ5vftwQQuKpfKXEVJhL1cCqnUt1n5fPS5cFUYR8MtXq7VgCh0L9uH7OFEkp6f8POxVV0dvsklMkuHDVfKRmIDtwq69hTbEX81JrmMu8BrRNIIGTvsM8VKc')"></div>
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="play-button size-14 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center play-glow opacity-0 transition-all duration-300 shadow-xl shadow-purple-900/40">
+              <span class="material-symbols-outlined text-white text-3xl">play_arrow</span>
+            </div>
+          </div>
+          <div class="absolute bottom-3 right-3 px-2 py-1 bg-black/70 backdrop-blur-md rounded text-[10px] font-bold text-white shadow-sm">
+            42:15
+          </div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="font-bold text-lg text-slate-800 group-hover:text-purple-600 transition-colors line-clamp-1">The Power of Persistent Prayer</h3>
+            <span class="material-symbols-outlined text-slate-300 hover:text-slate-600 transition-colors">more_vert</span>
+          </div>
+          <div class="flex items-center gap-3 text-sm text-slate-500">
+            <span class="font-medium text-slate-600">Rev. Michael Smith</span>
+            <span class="size-1 rounded-full bg-slate-300"></span>
+            <span>Kingdom Habits</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="group sermon-card cursor-pointer bg-white rounded-xl shadow-sm border border-slate-100 hover:shadow-lg transition-all duration-300">
+        <div class="relative aspect-video rounded-t-xl overflow-hidden">
+          <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="Ocean waves at dusk" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuATA74iDj44-PMHnJXIDfpuUpgNJN3KuvYarNhYh2RQXL_PCAenVJXPrUyjUjN1YfpInJw7Z7W1WZ37U8e5tJJYjKtUjmt1_UeTzoJ8JbAxBBU9sdM0zC8TwZyfisyUl9W3o8Gw_Z-43TXSqzhBQhl4T9S7NqfQ9bpqhp6lf_VJauc52hi0BgUTbY-0J_OztLtN3mD0xQnwQkWZfig6CVs8j3GrCIJPNgkOOdS7olq0cO9FLo7AkJg1MQNwJ8vsyrKLrGAQUyI0FxM')"></div>
+          <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors"></div>
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="play-button size-14 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 flex items-center justify-center play-glow opacity-0 transition-all duration-300 shadow-xl shadow-purple-900/40">
+              <span class="material-symbols-outlined text-white text-3xl">play_arrow</span>
+            </div>
+          </div>
+          <div class="absolute bottom-3 right-3 px-2 py-1 bg-black/70 backdrop-blur-md rounded text-[10px] font-bold text-white shadow-sm">
+            51:02
+          </div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="font-bold text-lg text-slate-800 group-hover:text-purple-600 transition-colors line-clamp-1">Walking in the Light</h3>
+            <span class="material-symbols-outlined text-slate-300 hover:text-slate-600 transition-colors">more_vert</span>
+          </div>
+          <div class="flex items-center gap-3 text-sm text-slate-500">
+            <span class="font-medium text-slate-600">Dr. Sarah Jenkins</span>
+            <span class="size-1 rounded-full bg-slate-300"></span>
+            <span>1 John Series</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="mt-16 flex justify-center">
+      <button class="px-10 py-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:shadow-lg hover:shadow-purple-500/30 text-white rounded-lg font-bold transition-all transform hover:scale-105">
+        Load More Sermons
+      </button>
+    </div>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .play-glow {
+      box-shadow: 0 0 20px 5px rgba(147, 51, 234, 0.4);
+  }
+  .sermon-card:hover .play-button {
+      transform: scale(1.1);
+      opacity: 1;
+  }
+</style>

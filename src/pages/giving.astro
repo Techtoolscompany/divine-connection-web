@@ -1,0 +1,143 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Giving | Divine Connection">
+  <Navbar />
+  
+  <main class="flex flex-col items-center w-full min-h-screen">
+    <section class="w-full max-w-[1200px] mt-8 px-4">
+      <div class="@container">
+        <div class="flex min-h-[400px] flex-col gap-6 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-8 text-center relative overflow-hidden" data-alt="Cinematic wide shot of a modern church sanctuary with purple atmospheric lighting" style='background-image: linear-gradient(rgba(10, 10, 10, 0.6) 0%, rgba(10, 10, 10, 0.9) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAbAB0rSL_3zBLR4T5F6coIhnpG50Eci4704pkTkoqBlXZuJYT-zDl8-EF1AAEt_62P-ejxcBPXBdU-5-Rub4E3uU-ZiAOIMetrep66ZU3xfEajqYo5gHC-2siqzTpspe61dYqilKGGmOc45Xmf4pCbXdof-q-tnemxELtsEGMByFn4urnYwZyODWeGfEaD7a_ZMSGa_M5tYXrBGP7wWFSyJpYbLlOqUz3VtVIL6GWRNgmCXwGCXtlSJcW_r7oGmcSS_N5pw6oppig");'>
+          <div class="flex flex-col gap-4 max-w-2xl relative z-10">
+            <span class="text-purple-500 font-bold tracking-widest uppercase text-xs opacity-0 animate-fade-in-up">Serving Suitland, MD since 1998</span>
+            <h1 class="text-white text-4xl md:text-6xl font-black leading-tight tracking-[-0.033em] opacity-0 animate-fade-in-up delay-100">
+              Your Generosity, God’s Impact.
+            </h1>
+            <p class="text-white/80 text-base md:text-lg font-normal leading-relaxed opacity-0 animate-fade-in-up delay-200">
+              Partner with us in our mission to serve the Suitland community and beyond. Every gift plants a seed for change, providing hope and resources to those in need.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full max-w-[800px] -mt-16 px-4 pb-20 relative z-20">
+      <div class="bg-white border border-gray-100 rounded-xl p-6 md:p-10 shadow-2xl backdrop-blur-sm">
+        <div class="mb-8">
+          <h2 class="text-gray-900 text-xl font-bold mb-4">Make a Contribution</h2>
+          <div class="flex h-12 items-center justify-center rounded-lg bg-gray-100 p-1 border border-gray-200">
+            <label class="flex cursor-pointer h-full grow items-center justify-center rounded-md px-2 transition-all has-[:checked]:bg-[linear-gradient(135deg,#7f13ec_0%,#1e40af_100%)] has-[:checked]:text-white text-gray-500 text-sm font-semibold">
+              <span class="truncate">One-time Gift</span>
+              <input checked="" class="invisible w-0" name="giving-frequency" type="radio" value="One-time"/>
+            </label>
+            <label class="flex cursor-pointer h-full grow items-center justify-center rounded-md px-2 transition-all has-[:checked]:bg-[linear-gradient(135deg,#7f13ec_0%,#1e40af_100%)] has-[:checked]:text-white text-gray-500 text-sm font-semibold">
+              <span class="truncate">Recurring Monthly</span>
+              <input class="invisible w-0" name="giving-frequency" type="radio" value="Recurring"/>
+            </label>
+          </div>
+        </div>
+        
+        <div class="mb-8">
+          <label class="block text-sm font-medium text-gray-600 mb-2">Select Fund</label>
+          <div class="relative">
+            <select class="w-full bg-gray-50 border border-gray-200 rounded-lg h-12 px-4 text-gray-900 appearance-none focus:ring-2 focus:ring-purple-600 outline-none">
+              <option value="general">General Tithes & Offerings</option>
+              <option value="missions">Global Missions</option>
+              <option value="building">Building Fund - Suitland Campus</option>
+              <option value="youth">Youth Mentorship Program</option>
+            </select>
+            <span class="material-symbols-outlined absolute right-4 top-3 text-gray-400 pointer-events-none">expand_more</span>
+          </div>
+        </div>
+        
+        <div class="mb-8">
+          <label class="block text-sm font-medium text-gray-600 mb-4">Select Amount</label>
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+            <button class="flex h-12 items-center justify-center rounded-lg bg-white border border-gray-200 hover:border-purple-500/50 transition-colors text-gray-900 font-bold">$25</button>
+            <button class="flex h-12 items-center justify-center rounded-lg bg-[linear-gradient(135deg,#7f13ec_0%,#1e40af_100%)] border border-transparent text-white font-bold shadow-md">$50</button>
+            <button class="flex h-12 items-center justify-center rounded-lg bg-white border border-gray-200 hover:border-purple-500/50 transition-colors text-gray-900 font-bold">$100</button>
+            <button class="flex h-12 items-center justify-center rounded-lg bg-white border border-gray-200 hover:border-purple-500/50 transition-colors text-gray-900 font-bold">$250</button>
+            <button class="flex h-12 items-center justify-center rounded-lg bg-white border border-gray-200 hover:border-purple-500/50 transition-colors text-gray-900 font-bold">$500</button>
+          </div>
+        </div>
+        
+        <div class="mb-10">
+          <label class="block text-sm font-medium text-gray-600 mb-2">Or enter a custom amount</label>
+          <div class="relative">
+            <span class="absolute left-4 top-3 font-bold text-giving-gradient">$</span>
+            <input class="w-full bg-gray-50 border border-gray-200 rounded-lg h-12 pl-8 pr-4 text-gray-900 focus:ring-2 focus:ring-purple-600 outline-none text-lg placeholder-gray-400" placeholder="0.00" type="number"/>
+          </div>
+        </div>
+        
+        <button class="w-full h-14 giving-gradient rounded-lg text-white text-lg font-bold tracking-wide shadow-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+          <span class="material-symbols-outlined">favorite</span>
+          Give Now
+        </button>
+        
+        <div class="mt-8 flex items-center justify-center gap-6 opacity-60 grayscale transition-all hover:grayscale-0 hover:opacity-100">
+          <div class="flex items-center gap-1 text-xs text-gray-500">
+            <span class="material-symbols-outlined text-sm">lock</span>
+            SECURE PCI COMPLIANT
+          </div>
+          <div class="flex items-center gap-1 text-xs text-gray-500">
+            <span class="material-symbols-outlined text-sm">verified_user</span>
+            SSL ENCRYPTED
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full max-w-[1100px] px-4 pb-24">
+      <div class="text-center mb-12">
+        <h2 class="text-gray-900 text-3xl font-bold mb-4">Where Your Seeds Are Planted</h2>
+        <div class="w-16 h-1 bg-purple-600 mx-auto rounded-full"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white border border-gray-200 rounded-xl p-6 hover:border-purple-500/40 transition-colors shadow-sm">
+          <div class="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-purple-600">
+            <span class="material-symbols-outlined">restaurant</span>
+          </div>
+          <h3 class="text-gray-900 text-xl font-bold mb-2">Suitland Food Drive</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Last year, your contributions helped provide over 12,000 meals to families in Suitland facing food insecurity.
+          </p>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-6 hover:border-purple-500/40 transition-colors shadow-sm">
+          <div class="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-purple-600">
+            <span class="material-symbols-outlined">school</span>
+          </div>
+          <h3 class="text-gray-900 text-xl font-bold mb-2">Youth Mentorship</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Supporting after-school programs and scholarship funds for local Suitland students to pursue higher education.
+          </p>
+        </div>
+        <div class="bg-white border border-gray-200 rounded-xl p-6 hover:border-purple-500/40 transition-colors shadow-sm">
+          <div class="bg-purple-100 w-12 h-12 rounded-lg flex items-center justify-center mb-4 text-purple-600">
+            <span class="material-symbols-outlined">public</span>
+          </div>
+          <h3 class="text-gray-900 text-xl font-bold mb-2">Global Missions</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Expanding our reach to international mission trips and sustainable clean water projects in developing regions.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <Footer />
+</Layout>
+
+<style>
+  .giving-gradient {
+      background: linear-gradient(135deg, #7f13ec 0%, #1e40af 100%);
+  }
+  .text-giving-gradient {
+      background: linear-gradient(135deg, #7f13ec 0%, #1e40af 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+  }
+</style>

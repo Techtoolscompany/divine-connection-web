@@ -1,0 +1,116 @@
+---
+// Navbar with scroll-based transparency and single CTA focus
+---
+
+<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 flex justify-center py-4 px-4 transition-all duration-500">
+  <div id="nav-container" class="glass-effect flex w-full max-w-[1200px] items-center justify-between px-6 py-3 rounded-full transition-all duration-500">
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-3 group">
+      <div class="size-8 text-purple-600 transition-transform duration-300 group-hover:scale-110">
+        <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill-rule="evenodd"></path>
+        </svg>
+      </div>
+      <h2 class="text-lg font-black tracking-tighter uppercase text-slate-900 transition-colors duration-300">Divine Connection</h2>
+    </a>
+
+    <!-- Desktop Menu -->
+    <div class="hidden lg:flex items-center gap-8">
+      <a class="nav-link text-xs font-bold uppercase tracking-widest text-slate-600 hover:text-purple-600 transition-all duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-purple-600 after:to-blue-600 hover:after:w-full after:transition-all after:duration-300" href="/">Home</a>
+      <a class="nav-link text-xs font-bold uppercase tracking-widest text-slate-600 hover:text-purple-600 transition-all duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-purple-600 after:to-blue-600 hover:after:w-full after:transition-all after:duration-300" href="/about">About</a>
+      <a class="nav-link text-xs font-bold uppercase tracking-widest text-slate-600 hover:text-purple-600 transition-all duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-purple-600 after:to-blue-600 hover:after:w-full after:transition-all after:duration-300" href="/sermons">Sermons</a>
+      <a class="nav-link text-xs font-bold uppercase tracking-widest text-slate-600 hover:text-purple-600 transition-all duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-purple-600 after:to-blue-600 hover:after:w-full after:transition-all after:duration-300" href="/ministries">Ministries</a>
+      <a class="nav-link text-xs font-bold uppercase tracking-widest text-slate-600 hover:text-purple-600 transition-all duration-300 relative after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-gradient-to-r after:from-purple-600 after:to-blue-600 hover:after:w-full after:transition-all after:duration-300" href="/events">Events</a>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="hidden lg:flex items-center gap-6">
+      <a href="/giving" class="text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-purple-600 transition-colors duration-300">
+        Give
+      </a>
+      <a href="/connect" class="btn-gradient text-white px-8 py-3 rounded-full text-xs font-black uppercase tracking-widest shadow-lg shadow-purple-500/25 flex items-center gap-2">
+        <span>Plan Your Visit</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-btn" class="lg:hidden flex flex-col gap-1.5 p-2 group" aria-label="Toggle menu">
+      <span class="w-6 h-0.5 bg-slate-700 transition-all duration-300 group-hover:bg-purple-600"></span>
+      <span class="w-6 h-0.5 bg-slate-700 transition-all duration-300 group-hover:bg-purple-600"></span>
+      <span class="w-4 h-0.5 bg-slate-700 transition-all duration-300 group-hover:w-6 group-hover:bg-purple-600"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-menu" class="fixed inset-0 z-40 bg-white/95 backdrop-blur-xl transform translate-x-full transition-transform duration-500 lg:hidden">
+  <div class="flex flex-col items-center justify-center h-full gap-8 px-8">
+    <a href="/" class="text-2xl font-black uppercase tracking-tight text-slate-900 hover:text-purple-600 transition-colors">Home</a>
+    <a href="/about" class="text-2xl font-black uppercase tracking-tight text-slate-900 hover:text-purple-600 transition-colors">About</a>
+    <a href="/sermons" class="text-2xl font-black uppercase tracking-tight text-slate-900 hover:text-purple-600 transition-colors">Sermons</a>
+    <a href="/ministries" class="text-2xl font-black uppercase tracking-tight text-slate-900 hover:text-purple-600 transition-colors">Ministries</a>
+    <a href="/events" class="text-2xl font-black uppercase tracking-tight text-slate-900 hover:text-purple-600 transition-colors">Events</a>
+    <a href="/giving" class="text-2xl font-black uppercase tracking-tight text-slate-900 hover:text-purple-600 transition-colors">Give</a>
+    <div class="pt-8 border-t border-slate-200 w-full flex justify-center">
+      <a href="/connect" class="btn-gradient text-white px-10 py-4 rounded-full text-sm font-black uppercase tracking-widest shadow-xl">
+        Plan Your Visit
+      </a>
+    </div>
+  </div>
+  <button id="mobile-menu-close" class="absolute top-6 right-6 p-2" aria-label="Close menu">
+    <svg class="w-8 h-8 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+    </svg>
+  </button>
+</div>
+
+<script>
+  // Scroll-based navbar transparency
+  const nav = document.getElementById('main-nav');
+  const navContainer = document.getElementById('nav-container');
+  
+  let lastScroll = 0;
+  
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll > 100) {
+      navContainer?.classList.add('shadow-lg', 'shadow-slate-200/50');
+      nav?.classList.add('py-2');
+      nav?.classList.remove('py-4');
+    } else {
+      navContainer?.classList.remove('shadow-lg', 'shadow-slate-200/50');
+      nav?.classList.remove('py-2');
+      nav?.classList.add('py-4');
+    }
+    
+    lastScroll = currentScroll;
+  });
+
+  // Mobile menu toggle
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileMenuClose = document.getElementById('mobile-menu-close');
+
+  mobileMenuBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.remove('translate-x-full');
+    document.body.style.overflow = 'hidden';
+  });
+
+  mobileMenuClose?.addEventListener('click', () => {
+    mobileMenu?.classList.add('translate-x-full');
+    document.body.style.overflow = '';
+  });
+
+  // Close menu on link click
+  mobileMenu?.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu?.classList.add('translate-x-full');
+      document.body.style.overflow = '';
+    });
+  });
+</script>
+

@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Connect With Us | Divine Connection">
+  <Navbar />
+  
+  <main class="pt-32 pb-24 px-6 min-h-screen bg-slate-50">
+    <div class="max-w-xl mx-auto">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-black uppercase tracking-tighter text-slate-900 mb-4 opacity-0 animate-fade-in-up">Connect Card</h1>
+        <p class="text-slate-500 opacity-0 animate-fade-in-up delay-100">We'd love to get to know you! Fill out the form below to plan your visit or get connected.</p>
+      </div>
+
+      <form class="bg-white p-8 md:p-10 rounded-[2rem] shadow-xl shadow-slate-200/50 space-y-6 opacity-0 animate-fade-in-up delay-200">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="space-y-2">
+            <label for="firstName" class="text-xs font-bold uppercase tracking-widest text-slate-500">First Name</label>
+            <input type="text" id="firstName" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all font-medium" placeholder="Jane" />
+          </div>
+          <div class="space-y-2">
+            <label for="lastName" class="text-xs font-bold uppercase tracking-widest text-slate-500">Last Name</label>
+            <input type="text" id="lastName" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all font-medium" placeholder="Doe" />
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <label for="email" class="text-xs font-bold uppercase tracking-widest text-slate-500">Email Address</label>
+          <input type="email" id="email" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all font-medium" placeholder="jane@example.com" />
+        </div>
+
+        <div class="space-y-2">
+          <label for="phone" class="text-xs font-bold uppercase tracking-widest text-slate-500">Phone Number</label>
+          <input type="tel" id="phone" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all font-medium" placeholder="(555) 123-4567" />
+        </div>
+
+        <div class="space-y-2">
+          <label for="interest" class="text-xs font-bold uppercase tracking-widest text-slate-500">I'm Interested In</label>
+          <select id="interest" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all font-medium text-slate-700">
+            <option>Planning a Visit</option>
+            <option>Learning More About Faith</option>
+            <option>Joining a Life Group</option>
+            <option>Volunteering</option>
+            <option>Prayer Request</option>
+          </select>
+        </div>
+
+        <div class="space-y-2">
+          <label for="message" class="text-xs font-bold uppercase tracking-widest text-slate-500">Message (Optional)</label>
+          <textarea id="message" rows="4" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-500 transition-all font-medium" placeholder="How can we help you?"></textarea>
+        </div>
+
+        <button type="submit" class="w-full btn-gradient text-white h-14 rounded-xl font-black uppercase tracking-widest shadow-lg shadow-purple-500/20 hover:scale-[1.02] transition-transform">
+          Submit Form
+        </button>
+      </form>
+    </div>
+  </main>
+  
+  <Footer />
+</Layout>

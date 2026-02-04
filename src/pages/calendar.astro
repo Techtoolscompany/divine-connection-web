@@ -1,0 +1,86 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const currentMonth = "October 2026";
+
+// Dummy calendar data (starting Oct 1st on a Thursday for example)
+const calendarDays = Array.from({ length: 35 }, (_, i) => {
+    const day = i - 3; // Offset to start month correctly
+    if (day < 1 || day > 31) return null;
+    return day;
+});
+
+const events = [
+    { day: 4, title: "Sunday Service", time: "10:00 AM", type: "service" },
+    { day: 7, title: "Bible Study", time: "7:00 PM", type: "study" },
+    { day: 11, title: "Sunday Service", time: "10:00 AM", type: "service" },
+    { day: 14, title: "Bible Study", time: "7:00 PM", type: "study" },
+    { day: 18, title: "Sunday Service", time: "10:00 AM", type: "service" },
+    { day: 21, title: "Bible Study", time: "7:00 PM", type: "study" },
+    { day: 24, title: "Night of Worship", time: "7:00 PM", type: "special" },
+    { day: 25, title: "Sunday Service", time: "10:00 AM", type: "service" },
+    { day: 28, title: "Food Drive", time: "10:00 AM", type: "outreach" },
+];
+---
+
+<Layout title="Calendar | Divine Connection">
+  <Navbar />
+  
+  <main class="flex-1 max-w-[1200px] mx-auto w-full px-6 py-12">
+    <div class="text-center mb-12">
+      <span class="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent font-bold text-sm uppercase tracking-[0.2em] mb-4 block opacity-0 animate-fade-in-up">Schedule</span>
+      <h1 class="font-serif text-5xl md:text-6xl font-light italic leading-tight mb-2 text-slate-900 opacity-0 animate-fade-in-up delay-100">Monthly <span class="text-gradient">Calendar</span></h1>
+    </div>
+
+    <div class="bg-white rounded-[2rem] shadow-xl border border-slate-100 overflow-hidden opacity-0 animate-fade-in-up delay-200">
+      <div class="flex items-center justify-between p-8 border-b border-slate-100">
+        <h2 class="text-2xl font-bold text-slate-800">{currentMonth}</h2>
+        <div class="flex gap-2">
+            <button class="size-8 rounded-full border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-colors">
+                <span class="material-symbols-outlined text-sm">chevron_left</span>
+            </button>
+            <button class="size-8 rounded-full border border-slate-200 flex items-center justify-center hover:bg-slate-50 transition-colors">
+                <span class="material-symbols-outlined text-sm">chevron_right</span>
+            </button>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-7 border-b border-slate-100 bg-slate-50">
+        {daysOfWeek.map(day => (
+            <div class="py-4 text-center text-xs font-bold uppercase tracking-widest text-slate-500">{day}</div>
+        ))}
+      </div>
+
+      <div class="grid grid-cols-7 bg-slate-50 gap-px border-l border-slate-100">
+        {calendarDays.map((day) => (
+            <div class={`min-h-[120px] bg-white p-3 relative group hover:bg-slate-50 transition-colors ${!day ? 'bg-slate-50/50' : ''}`}>
+                {day && (
+                    <>
+                        <span class={`text-sm font-medium ${day === 24 ? 'text-white bg-purple-600 size-6 rounded-full flex items-center justify-center' : 'text-slate-400'}`}>{day}</span>
+                        <div class="mt-2 space-y-1">
+                            {events.filter(e => e.day === day).map(event => (
+                                <div class={`text-[10px] p-1.5 rounded border border-l-2 truncate
+                                    ${event.type === 'service' ? 'bg-blue-50 border-blue-100 border-l-blue-500 text-blue-700' : 
+                                      event.type === 'special' ? 'bg-purple-50 border-purple-100 border-l-purple-500 text-purple-700' :
+                                      event.type === 'outreach' ? 'bg-green-50 border-green-100 border-l-green-500 text-green-700' :
+                                      'bg-slate-50 border-slate-100 border-l-slate-400 text-slate-600'
+                                    }
+                                `}>
+                                    <span class="font-bold block">{event.time}</span>
+                                    {event.title}
+                                </div>
+                            ))}
+                        </div>
+                    </>
+                )}
+            </div>
+        ))}
+      </div>
+    </div>
+  </main>
+  
+  <Footer />
+</Layout>
